@@ -489,7 +489,8 @@ $(function () {
         closeMobileSidebar('toc')
       } else {
         e.preventDefault()
-        scrollToDest($(this).attr('href'))
+        scrollToDest(decodeURI($(this).attr('href')))
+        //scrollToDest($(this).attr('href'))
       }
     })
 
